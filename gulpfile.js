@@ -3,17 +3,20 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const merge = require('merge-stream');
+const concat = require('gulp-concat')
 
 gulp.task('min-ghostjs', function() {
   return gulp.src('./core/built/assets/ghost.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./core/built/assets/ghostmin.js'))
+    .pipe(concat('ghost.min.js'))
+    .pipe(gulp.dest('./core/built/assets/'))
 });
 
 gulp.task('min-vendorjs', function() {
   return gulp.src('./core/built/assets/vendor.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./core/built/assets/vendormin.js'))
+    .pipe(concat('vendor.min.js'))
+    .pipe(gulp.dest('./core/built/assets/'))
 });
 
 gulp.task('copyjs', function() {
