@@ -25,4 +25,5 @@ gulp.task('copyjs', function() {
 });
 
 gulp.task('default', ['copyjs']);
-gulp.task('pro', ['min-ghostjs', 'min-vendorjs']);
+
+gulp.task('pro', ['copyjs', 'min-ghostjs', 'min-vendorjs']);
