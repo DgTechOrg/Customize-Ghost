@@ -8,6 +8,12 @@ Change log
 -  所有的图片上传到七牛, 不配置七牛配置会出错, 下一版将修改可传到本地
 -  修复模板渲染的时候对于当前运行环境判断的bug
 
+如何运行
+--------
+
+1.  copy config.example config.js 并且修改相关配置(建议使用非sqlite3, 以及配置七牛存储)
+2.  运行`gulp pro`
+
 
 ![Ghost Screenshot](https://cloud.githubusercontent.com/assets/120485/6626466/6dae46b2-c8ff-11e4-8c7c-8dd63b215f7b.jpg)
 
